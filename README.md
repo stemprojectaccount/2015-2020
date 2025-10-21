@@ -1,4 +1,3 @@
-
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -846,7 +845,7 @@
         
     <script>
         // ===== DỮ LIỆU HỌC SINH MẪU =====
-        // Bạn có thể thêm dữ liệu thực tế vào đây sau
+        // Đã thêm thông tin giới tính để phân biệt ảnh nam/nữ
         const studentsData = {
             "2015-2016": [
                 {
@@ -854,30 +853,34 @@
                     class: "12A1",
                     achievement: "Huy chương Vàng Toán Quốc gia, Giải Nhất Tin học",
                     teacher: "Cô Nguyễn Thị B",
-                    score: "9.5"
+                    score: "9.5",
+                    gender: "male"
                 },
                 {
                     name: "TRẦN THỊ B",
                     class: "12A2", 
                     achievement: "Huy chương Bạc Vật lý, Giải Nhì Hóa học",
                     teacher: "Thầy Phạm Văn C",
-                    score: "9.2"
+                    score: "9.2",
+                    gender: "female"
                 }
             ],
-            "2016-20172017": [
+            "2016-2017": [
                 {
                     name: "LÊ VĂN C",
                     class: "12A1",
                     achievement: "Huy chương Vàng Olympic Toán, Giải Nhất Vật lý",
                     teacher: "Cô Trần Thị D",
-                    score: "9.6"
+                    score: "9.6",
+                    gender: "male"
                 },
                 {
                     name: "PHẠM THỊ D",
                     class: "12A3",
                     achievement: "Huy chương Bạc Hóa học, Giải Ba Sinh học",
                     teacher: "Thầy Nguyễn Văn E",
-                    score: "9.1"
+                    score: "9.1",
+                    gender: "female"
                 }
             ],
             "2017-2018": [
@@ -886,14 +889,16 @@
                     class: "12A2",
                     achievement: "Giải Nhất Quốc gia môn Toán, Huy chương Vàng Tin học",
                     teacher: "Cô Lê Thị F",
-                    score: "9.7"
+                    score: "9.7",
+                    gender: "male"
                 },
                 {
                     name: "VŨ THỊ F",
                     class: "12A1",
                     achievement: "Huy chương Bạc Vật lý, Giải Nhì Hóa học",
                     teacher: "Thầy Đặng Văn G",
-                    score: "9.3"
+                    score: "9.3",
+                    gender: "female"
                 }
             ],
             "2018-2019": [
@@ -902,14 +907,16 @@
                     class: "12A3",
                     achievement: "Huy chương Vàng Toán Quốc tế, Giải Nhất Vật lý",
                     teacher: "Cô Phan Thị H",
-                    score: "9.8"
+                    score: "9.8",
+                    gender: "male"
                 },
                 {
                     name: "PHAN THỊ H",
                     class: "12A2",
                     achievement: "Huy chương Bạc Hóa học, Giải Ba Sinh học",
                     teacher: "Thầy Bùi Văn I",
-                    score: "9.4"
+                    score: "9.4",
+                    gender: "female"
                 }
             ],
             "2019-2020": [
@@ -918,14 +925,16 @@
                     class: "12A1",
                     achievement: "Giải Nhất Quốc gia môn Toán, Huy chương Vàng Tin học",
                     teacher: "Cô Võ Thị K",
-                    score: "9.6"
+                    score: "9.6",
+                    gender: "male"
                 },
                 {
                     name: "VÕ THỊ K",
                     class: "12A3",
                     achievement: "Huy chương Bạc Vật lý, Giải Nhì Hóa học",
                     teacher: "Thầy Ngô Văn L",
-                    score: "9.2"
+                    score: "9.2",
+                    gender: "female"
                 }
             ]
         };
@@ -952,16 +961,17 @@
                 const card = document.createElement('div');
                 card.classList.add('student-card');
                 
-                // Tạo hình ảnh ngẫu nhiên dựa trên index
-                const gender = index % 2 === 0 ? 'men' : 'women';
-                const imgIndex = (index % 50) + 1;
+                // Xác định ảnh dựa trên giới tính
+                const imageUrl = student.gender === 'male' 
+                    ? 'https://i.postimg.cc/2Sns9JkF/Chat-GPT-Image-Oct-20-2025-08-20-11-PM.png'
+                    : 'https://i.postimg.cc/fRYGqFzc/Chat-GPT-Image-Oct-20-2025-08-20-23-PM.png';
                 
                 // Lấy thành tích đầu tiên để hiển thị badge
                 const firstAchievement = student.achievement.split(',')[0];
                 
                 card.innerHTML = `
                     <i class="fas fa-user-graduate student-icon"></i>
-                    <img src="https://randomuser.me/api/portraits/${gender}/${imgIndex}.jpg" alt="${student.name}" class="student-image">
+                    <img src="${imageUrl}" alt="${student.name}" class="student-image">
                     <h3>${student.name}</h3>
                     <p><strong>Lớp:</strong> ${student.class}</p>
                     <div class="achievement-badge">${firstAchievement}</div>
@@ -1026,10 +1036,10 @@
             
             console.log("=== TRANG CHÍNH HỌC SINH XUẤT SẮC ===");
             console.log("Có 5 năm học để lựa chọn:");
-            console.log("- 2023-2024 (Năm học hiện tại)");
-            console.log("- 2022-2023");
-            console.log("- 2021-2022"); 
-            console.log("- 2020-2021");
+            console.log("- 2015-2016");
+            console.log("- 2016-2017");
+            console.log("- 2017-2018"); 
+            console.log("- 2018-2019");
             console.log("- 2019-2020");
             console.log("Mỗi năm học đều có nút QUAY LẠI TRANG CHÍNH");
         });
