@@ -848,23 +848,29 @@
         // Đã thêm thông tin giới tính để phân biệt ảnh nam/nữ
         const studentsData = {
             "2015-2016": [
-                {
-                    name: "NGUYỄN VĂN A",
-                    class: "12A1",
-                    achievement: "Huy chương Vàng Toán Quốc gia, Giải Nhất Tin học",
-                    teacher: "Cô Nguyễn Thị B",
-                    score: "9.5",
-                    gender: "male"
-                },
-                {
-                    name: "TRẦN THỊ B",
-                    class: "12A2", 
-                    achievement: "Huy chương Bạc Vật lý, Giải Nhì Hóa học",
-                    teacher: "Thầy Phạm Văn C",
-                    score: "9.2",
-                    gender: "female"
-                }
-            ],
+    {
+        name: "PHẠM TRUNG KIÊN",
+        class: "9A",
+        achievement: "Giải Nhất Tiếng Anh cấp Huyện, Giải Nhì Tiếng Anh cấp Tỉnh",
+        teacher: "",
+        score: ""
+    },
+    {
+        name: "NGUYỄN THỊ NGUYỆT HÀ",
+        class: "9A",
+        achievement: "Giải Nhất Sinh Học cấp Huyện",
+        teacher: "",
+        score: ""
+    },
+    {
+        name: "NGUYỄN NGÔ TRUNG KIÊN",
+        class: "9A",
+        achievement: "Giải Nhất MTCT Cassio cấp Huyện",
+        teacher: "",
+        score: ""
+    }
+     ],
+
             "2016-2017": [
                 {
                     name: "LÊ VĂN C",
@@ -902,40 +908,57 @@
                 }
             ],
             "2018-2019": [
-                {
-                    name: "ĐẶNG VĂN G",
-                    class: "12A3",
-                    achievement: "Huy chương Vàng Toán Quốc tế, Giải Nhất Vật lý",
-                    teacher: "Cô Phan Thị H",
-                    score: "9.8",
-                    gender: "male"
-                },
-                {
-                    name: "PHAN THỊ H",
-                    class: "12A2",
-                    achievement: "Huy chương Bạc Hóa học, Giải Ba Sinh học",
-                    teacher: "Thầy Bùi Văn I",
-                    score: "9.4",
-                    gender: "female"
-                }
+                 {
+        name: "TRẦN THỊ YẾN NHI",
+        class: "9",
+        achievement: "Giải Nhì Địa Lý cấp Tỉnh",
+        teacher: "",
+        score: "15"
+    },
+    {
+        name: "PHAN THỊ TƯỜNG VI",
+        class: "9",
+        achievement: "Giải Khuyến Khích Địa Lý cấp Tỉnh",
+        teacher: "",
+        score: "12.25"
+    },
+    {
+        name: "NGUYỄN HÀ CHÂU",
+        class: "9",
+        achievement: "Giải Khuyến Khích Tiếng Anh cấp Tỉnh",
+        teacher: "",
+        score: "117.25"
+    },
+    {
+        name: "BÙI LÊ ANH QUÂN",
+        class: "9",
+        achievement: "Giải Khuyến Khích Tiếng Anh cấp Tỉnh",
+        teacher: "",
+        score: "110.50"
+    }
             ],
             "2019-2020": [
                 {
-                    name: "BÙI VĂN I",
-                    class: "12A1",
-                    achievement: "Giải Nhất Quốc gia môn Toán, Huy chương Vàng Tin học",
-                    teacher: "Cô Võ Thị K",
-                    score: "9.6",
-                    gender: "male"
-                },
-                {
-                    name: "VÕ THỊ K",
-                    class: "12A3",
-                    achievement: "Huy chương Bạc Vật lý, Giải Nhì Hóa học",
-                    teacher: "Thầy Ngô Văn L",
-                    score: "9.2",
-                    gender: "female"
-                }
+        name: "NGUYỄN HỒNG SƠN",
+        class: "9A",
+        achievement: "Giải Nhất Khoa học kỹ thuật cấp Huyện, Giải Nhì Khoa học kỹ thuật cấp Tỉnh",
+        teacher: "",
+        score: ""
+    },
+    {
+        name: "NGUYỄN TIẾN TÀI",
+        class: "9A",
+        achievement: "Giải Nhất Khoa học kỹ thuật cấp Huyện, Giải Nhì Khoa học kỹ thuật cấp Tỉnh",
+        teacher: "",
+        score: ""
+    },
+    {
+        name: "PHẠM VĂN NGUYÊN",
+        class: "9A",
+        achievement: "Giải Nhất Tiếng Anh cấp Huyện",
+        teacher: "",
+        score: ""
+    }
             ]
         };
 
