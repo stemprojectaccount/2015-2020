@@ -982,6 +982,7 @@
             ]
         };
 
+
         // ===== HÀM HIỂN THỊ DANH SÁCH HỌC SINH =====
         function showStudents(year) {
             // Ẩn phần chọn năm học
@@ -1000,12 +1001,23 @@
             
             const students = studentsData[year] || [];
             
+            if (students.length === 0) {
+                studentsGrid.innerHTML = `
+                    <div class="no-students-message">
+                        <i class="fas fa-info-circle" style="font-size: 4rem; margin-bottom: 20px; color: #FFD700;"></i>
+                        <h3 style="color: #fff; font-size: 1.8rem;">Chưa có dữ liệu học sinh cho năm học này</h3>
+                        <p style="color: #e0e0ff; font-size: 1.2rem;">Dữ liệu đang được cập nhật...</p>
+                    </div>
+                `;
+                return;
+            }
+            
             students.forEach((student, index) => {
                 const card = document.createElement('div');
                 card.classList.add('student-card');
                 
                 // Xác định ảnh dựa trên giới tính
-                const imageUrl = student.gender === 'male' 
+                const imageUrl = student.gender === 'nam' 
                     ? 'https://i.postimg.cc/2Sns9JkF/Chat-GPT-Image-Oct-20-2025-08-20-11-PM.png'
                     : 'https://i.postimg.cc/fRYGqFzc/Chat-GPT-Image-Oct-20-2025-08-20-23-PM.png';
                 
@@ -1078,11 +1090,11 @@
             
             console.log("=== TRANG CHÍNH HỌC SINH XUẤT SẮC ===");
             console.log("Có 5 năm học để lựa chọn:");
-            console.log("- 2015-2016");
-            console.log("- 2016-2017");
-            console.log("- 2017-2018"); 
-            console.log("- 2018-2019");
-            console.log("- 2019-2020");
+            console.log("- 2010-2011");
+            console.log("- 2011-2012");
+            console.log("- 2012-2013"); 
+            console.log("- 2013-2014");
+            console.log("- 2014-2015");
             console.log("Mỗi năm học đều có nút QUAY LẠI TRANG CHÍNH");
         });
     </script>
